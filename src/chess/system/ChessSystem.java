@@ -7,6 +7,7 @@ package chess.system;
 
 import boardgame.Board;
 import boardgame.Position;
+import chess.Chessmatch;
 
 /**
  *
@@ -18,7 +19,8 @@ public class ChessSystem {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Board board = new Board(8,8); 
+        Chessmatch chessMatch = new Chessmatch();
+        UI.printBoard(chessMatch.getPieces()); 
                 
                 
     }
