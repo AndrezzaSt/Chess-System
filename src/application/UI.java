@@ -7,6 +7,7 @@ package application;
 
 import chess.ChessPiece;
 import chess.ChessPosition;
+import chess.Chessmatch;
 import chess.Color;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -52,6 +53,13 @@ public class UI {
         } catch (RuntimeException e) {
             throw new InputMismatchException("Error reading ChessPosition. Valid values are form a1 to h8.");
         }
+    }
+    
+    public static void printMatch(Chessmatch chessMatch) {
+        printBoard(chessMatch.getPieces());
+        System.out.println();
+        System.out.println("Turn : " + chessMatch.getTurn());
+        System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
     }
 
     public static void printBoard(ChessPiece[][] pieces) {
